@@ -46,9 +46,9 @@ Users should be able to:
 
 ### Links
 
-- **Solution URL:** [Frontend Mentor Solution](#) <!-- Replace with your Frontend Mentor solution link -->
-- **Live Site URL:** [Live Site](#) <!-- Replace with your deployed project URL -->
-
+- **Solution URL:** [Frontend Mentor Solution](https://www.frontendmentor.io/solutions/project-tracking-intro-component-4wSDXSJAgd) 
+- **Live Site URL:** [Live Site](https://yashi-singh-9.github.io/Project-Tracking-Intro-Component/)
+  
 ---
 
 ## My Process

@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Barlow', sans-serif !important;
+  font-weight: 400;
+  font-size: 1.125rem !important;
+}
+header {
+  position: relative;
+  padding: 4rem;
+}
+header #menu-toggle {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+@media (min-width: 768px) {
+  header #menu-toggle {
+    display: none;
+  }
+}
+header #nav-menu {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  top: 110px;
+  right: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  background-color: #fff;
+  max-width: 650px;
+  width: 90%;
+}
+@media (min-width: 768px) {
+  header #nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    gap: 2rem;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    width: auto;
+  }
+}
+@media (max-width: 768px) {
+  header nav .nav-links {
+    flex-direction: column;
+  }
+}
+header nav .nav-links li {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+}
+header nav .nav-links li a,
+header nav .nav-links li a:visited {
+  color: hsl(230, 11%, 40%);
+  letter-spacing: 1px;
+}
+header nav .nav-links li a:hover,
+header nav .nav-links li a:visited:hover {
+  text-decoration: underline !important;
+}
+header nav .nav-links li a.login,
+header nav .nav-links li a:visited.login {
+  color: hsl(231, 7%, 65%);
+}
+main {
+  padding: 6rem;
+}
+@media (max-width: 900px) {
+  main {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 768px) {
+  main {
+    padding: 3.5rem;
+  }
+}
+@media (max-width: 520px) {
+  main {
+    padding: 1.5rem;
+  }
+}
+main .information {
+  flex: 1;
+}
+main .information ul li {
+  color: hsl(231, 7%, 65%);
+  letter-spacing: 0.4rem;
+  cursor: pointer;
+}
+@media (max-width: 425px) {
+  main .information ul li {
+    font-size: 0.7em;
+  }
+}
+main .information ul li.active {
+  background-color: hsl(230, 29%, 20%);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+main .information h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  color: hsl(230, 29%, 20%);
+  font-size: 5rem;
+}
+@media (max-width: 425px) {
+  main .information h1 {
+    font-size: 3rem;
+  }
+}
+main .information p {
+  max-width: 270px;
+  width: 100%;
+  color: hsl(230, 11%, 40%);
+}
+@media (max-width: 768px) {
+  main .information p {
+    max-width: unset;
+  }
+}
+main .information div .demo {
+  background-color: hsl(0, 100%, 68%);
+  word-spacing: 0.4rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  font-size: 1.2rem;
+  transition: 0.2s ease;
+}
+@media (max-width: 425px) {
+  main .information div .demo {
+    letter-spacing: unset;
+    font-size: 1rem;
+  }
+}
+main .information div .demo:hover {
+  background-color: hsl(0, 100%, 78%);
+}
+main .information div span {
+  word-spacing: 0.2rem;
+  letter-spacing: 0.2rem;
+  color: hsl(231, 7%, 65%);
+  cursor: pointer;
+}
+@media (max-width: 520px) {
+  main .information div span {
+    word-spacing: unset;
+    letter-spacing: unset;
+  }
+}
+main .image {
+  flex: 1;
+}
+main .image img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 1024px) {
+  main .image img {
+    height: 100%;
+  }
+}
+footer {
+  color: hsl(230, 29%, 20%);
+}
+footer a,
+footer a:visited {
+  color: hsl(230, 11%, 40%);
+}

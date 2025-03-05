@@ -1,0 +1,202 @@
+@red: hsl(0, 100%, 68%);
+@very-dark-blue: hsl(230, 29%, 20%);
+@dark-grayish-blue: hsl(230, 11%, 40%);
+@grayish-blue: hsl(231, 7%, 65%);
+@light-grayish-blue: hsl(207, 33%, 95%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Barlow', sans-serif !important;
+    font-weight: 400;
+    font-size: 1.125rem !important;
+}
+
+header{
+    position: relative;
+    padding: 4rem;
+
+    #menu-toggle {
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    #nav-menu {    
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 110px;
+        right: 1.5rem; 
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        background-color: #fff;
+        max-width: 650px;
+        width: 90%;
+
+        @media (min-width: 768px) {
+            display: flex !important;
+            position: static;
+            flex-direction: row; 
+            gap: 2rem;
+            box-shadow: none;
+            border: none;
+            padding: 0;
+            width: auto;
+        }
+    }
+
+    nav{
+        .nav-links{       
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
+
+            li{
+                font-family: 'Barlow Condensed', sans-serif;
+                font-weight: 700;
+
+                a,
+                a:visited{
+                    color: @dark-grayish-blue;
+                    letter-spacing: 1px;
+
+                    &:hover{
+                        text-decoration: underline !important;
+                    }
+
+                    &.login{
+                        color: @grayish-blue;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main{
+    padding: 6rem;
+
+    @media (max-width: 900px) {
+        flex-direction: column-reverse;
+    }
+
+    @media (max-width: 768px) {
+        padding: 3.5rem;
+    }
+
+    @media (max-width: 520px) {
+        padding: 1.5rem;
+    }
+
+    .information{
+        flex: 1;
+
+        ul{
+            li{
+                color: @grayish-blue;
+                letter-spacing: 0.4rem;
+                cursor: pointer;
+
+                @media (max-width: 425px) {
+                    font-size: 0.7em;
+                }
+
+                &.active{
+                    background-color: @very-dark-blue;
+                    font-family: 'Barlow Condensed', sans-serif;
+                    font-weight: 700;
+                    letter-spacing: normal;
+                }
+            }
+        }
+
+        h1{
+            font-family: 'Barlow Condensed', sans-serif;
+            font-weight: 700;
+            color: @very-dark-blue;
+            font-size: 5rem;
+
+            @media (max-width: 425px) {
+                font-size: 3rem;
+            }
+        }
+
+        p{
+            max-width: 270px;
+            width: 100%;
+            color: @dark-grayish-blue;
+
+            @media (max-width: 768px) {
+                max-width: unset;
+            }
+        }
+
+        div{
+            .demo{
+                background-color: @red;
+                word-spacing: 0.4rem;            
+                font-family: 'Barlow Condensed', sans-serif;
+                font-weight: 700;
+                letter-spacing: 0.1rem;
+                font-size: 1.2rem;
+                transition: 0.2s ease;
+
+                @media (max-width: 425px) {
+                    letter-spacing: unset;
+                    font-size: 1rem;
+                }
+
+                &:hover{
+                    background-color: lighten(@red, 10%);
+                }
+            }
+
+            span{
+                word-spacing: 0.2rem;
+                letter-spacing: 0.2rem;
+                color: @grayish-blue;
+                cursor: pointer;
+
+                @media (max-width: 520px) {
+                    word-spacing: unset;
+                    letter-spacing: unset;            
+                }
+            }
+        }
+    }
+
+    .image{
+        flex: 1;
+        
+        img{
+            max-width: 100%;
+            height: auto;
+
+            @media (max-width: 1024px) {
+                height: 100%;
+            }
+        }
+    }
+}
+
+footer{
+    color: @very-dark-blue;
+
+    a,
+    a:visited{
+        color: @dark-grayish-blue;
+    }
+}
